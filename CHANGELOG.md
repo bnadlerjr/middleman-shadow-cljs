@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 ### Changed
+- Ignore shadow-cljs temporary artifiacts in Git
+
 ### Fixed
 
 ## [0.1.0] - 2018-07-19
