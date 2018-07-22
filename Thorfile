@@ -22,6 +22,11 @@ module Middleman
       apply_template "core.cljs.tt", "source/cljs/#{snake_name}/core.cljs"
     end
 
+    def install_js_dependencies
+      # TODO: Detect if npm or yarn is being used instead of assuming yarn
+      run "yarn install"
+    end
+
     private
 
     def snake_name
