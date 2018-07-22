@@ -4,12 +4,14 @@ module Middleman
   class Generator < ::Thor::Group
     include ::Thor::Actions
 
+    NULL = RbConfig::CONFIG['host_os'] =~ /mingw|mswin/ ? 'NUL' : '/dev/null'
+
     argument :name
     source_root File.expand_path(File.dirname(__FILE__))
 
     def copy_default_files
-      # empty_directory(snake_name)
       apply_template "Gemfile.tt", "Gemfile"
+      apply_template "README.md.tt", "README.md"
       apply_template "config.rb.tt", "config.rb"
       apply_template "package.json.tt", "package.json"
       apply_template "shadow-cljs.edn.tt", "shadow-cljs.edn"
@@ -30,8 +32,25 @@ module Middleman
       snake_name.gsub(/_/, "-")
     end
 
+    def titleized_name
+      snake_name.split("_").map(&:capitalize).join(" ")
+    end
+
     def apply_template(src, dest)
       template("templates/#{src}", "#{dest}")
+    end
+
+    def has_git?
+      system("git --version >#{NULL} 2>&1")
+    end
+
+    def author
+      if has_git?
+        `git config user.name`.chomp
+      else
+        say "\nNo Git executable found. Using result of `whoami` as author name."
+        `whoami`.chomp
+      end
     end
   end
 end
