@@ -11,5 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Ignore shadow-cljs temporary artifiacts in Git
+- Run `yarn install` automatically when project is generated
 
 ### Fixed

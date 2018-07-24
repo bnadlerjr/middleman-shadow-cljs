@@ -3,7 +3,7 @@
 
 ## Prerequisites
 * [Middleman](https://middlemanapp.com/)
-* [Yarn](https://yarnpkg.com) (recommended) or [npm](https://www.npmjs.com/)
+* [Yarn](https://yarnpkg.com)
 
 ## Usage
 ### Generating a new project
@@ -13,11 +13,7 @@ To generate a new project, use Middleman's `-T` option. There's no need to downl
 middleman init my_project -T bnadlerjr/middleman-shadow-cljs
 ```
 
-After generating the project, install the Javascript dependencies:
-
-```bash
-yarn install
-```
+After generating the project, Middleman will automatically run `yarn install` to install the Javascript dependencies.
 
 ### Development
 Run `middleman server` as normal, ClojureScript compilation will take place automatically.
