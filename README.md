@@ -18,6 +18,13 @@ After generating the project, Middleman will automatically run `yarn install` to
 ### Development
 Run `middleman server` as normal, ClojureScript compilation will take place automatically.
 
+#### Rake
+Several Rake tasks are provided for convienence:
+
+`rake server`: starts the middleman server
+`rake autotest`: starts Karma and automatically runs tests when files are changed
+`rake ci`: runs Karma tests with Karma's `--single-run` option
+
 ### Production
 Run `middleman build` as normal.
 

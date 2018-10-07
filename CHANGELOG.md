@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - README template for generated project
 - Automatically install JS dependencies after project is generated
 - Support for Karma tests
+- Rake tasks for starting server and running tests
 
 ### Changed
 - Ignore shadow-cljs temporary artifiacts in Git

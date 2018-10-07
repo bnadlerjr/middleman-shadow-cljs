@@ -15,6 +15,7 @@ module Middleman
       apply_template "config.rb.tt", "config.rb"
       apply_template "karma.conf.js.tt", "karma.conf.js"
       apply_template "package.json.tt", "package.json"
+      apply_template "Rakefile.tt", "Rakefile"
       apply_template "shadow-cljs.edn.tt", "shadow-cljs.edn"
       apply_template "gitignore.tt", ".gitignore"
       apply_template "index.html.erb.tt", "source/index.html.erb"

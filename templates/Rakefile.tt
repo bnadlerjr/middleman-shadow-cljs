@@ -1,0 +1,14 @@
+desc "Start the development server"
+task :server do
+  exec("bundle exec middleman server")
+end
+
+desc "Autotest with Karma"
+task :autotest do
+  exec("./node_modules/.bin/karma start")
+end
+
+desc "Run Karma tests in CI environment"
+task :ci do
+  exec("bundle exec middleman build && ./node_modules/.bin/karma start --single-run")
+end
