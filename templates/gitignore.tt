@@ -1,9 +1,10 @@
+.DS_Store
 .bundle
 .cache
-.DS_Store
+.nrepl-port
 .sass-cache
 .shadow-cljs
-.nrepl-port
 .tmp
 build/
 node_modules/
+target/

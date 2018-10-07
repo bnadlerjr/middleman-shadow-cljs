@@ -13,6 +13,7 @@ module Middleman
       apply_template "Gemfile.tt", "Gemfile"
       apply_template "README.md.tt", "README.md"
       apply_template "config.rb.tt", "config.rb"
+      apply_template "karma.conf.js.tt", "karma.conf.js"
       apply_template "package.json.tt", "package.json"
       apply_template "shadow-cljs.edn.tt", "shadow-cljs.edn"
       apply_template "gitignore.tt", ".gitignore"
@@ -20,6 +21,7 @@ module Middleman
       apply_template "layout.erb.tt", "source/layouts/layout.erb"
       apply_template "site.css.scss.tt", "source/stylesheets/site.css.scss"
       apply_template "core.cljs.tt", "source/cljs/#{snake_name}/core.cljs"
+      apply_template "sample_test.cljs.tt", "tests/cljs/#{snake_name}/test/sample_test.cljs"
     end
 
     def install_js_dependencies

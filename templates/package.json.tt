@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cljs-test": "^0.1.0",
+    "karma-notify-reporter": "^1.0.1",
     "shadow-cljs": "^2.0.144"
   }
 }

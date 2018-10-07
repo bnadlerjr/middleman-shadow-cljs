@@ -1,0 +1,20 @@
+module.exports = function (config) {
+    config.set({
+        basePath: ".tmp/test-javascripts",
+        browsers: ["ChromeHeadless"],
+        client: {
+            args: ["shadow.test.karma.init"],
+            singleRun: true
+        },
+        colors: true,
+        files: ["tests.js"],
+        frameworks: ["cljs-test"],
+        logLevel: config.LOG_INFO,
+        plugins: [
+            "karma-chrome-launcher",
+            "karma-cljs-test",
+            "karma-notify-reporter"
+        ],
+        reporters: ["progress", "notify"]
+    })
+};

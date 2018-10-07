@@ -1,0 +1,15 @@
+(ns <%= kebab_name %>.test.sample-test
+  (:require [cljs.test :refer-macros [deftest testing is async]]))
+
+(deftest sample
+  (is (= 1 1)))
+
+;; Asynchronous test example
+; (deftest successful-login
+  ; (async done
+    ; (fb/login "jdoe@example.com" "secret"
+      ; (fn [user error]
+        ; (is (= "jdoe@example.com" (:email user)))
+        ; (is (not (nil? (:uid user))))
+        ; (is (nil? error))
+        ; (done)))))

@@ -10,6 +10,11 @@ activate :external_pipeline,
   command: "./node_modules/.bin/shadow-cljs #{build? ? :release : :watch} app",
   source: ".tmp"
 
+activate :external_pipeline,
+  name: :clojurescript_tests,
+  command: "./node_modules/.bin/shadow-cljs #{build? ? :release : :watch} tests",
+  source: ".tmp"
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

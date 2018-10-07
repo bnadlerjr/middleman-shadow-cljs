@@ -1,6 +1,6 @@
 ;; shadow-cljs configuration
 {:source-paths
- ["source/cljs"]
+ ["source/cljs" "tests/cljs"]
 
  :dependencies
  []
@@ -9,4 +9,6 @@
  {:app {:target :browser
         :output-dir ".tmp/javascripts"
         :asset-path "/javascripts"
-        :modules {:site {:entries [<%= kebab_name %>.core]}}}}}
+        :modules {:site {:entries [<%= kebab_name %>.core]}}}
+  :tests {:target :karma
+          :output-to ".tmp/test-javascripts/tests.js"}}}
